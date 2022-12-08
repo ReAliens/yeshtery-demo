@@ -5,3 +5,8 @@ export { default as trackIcon } from './shoppingCartIcon.svg';
 export { default as locationIcon } from './locationIcon.svg';
 export { default as leftArrowIcon } from './headerLeftArrow.svg';
 export { default as rightArrowIcon } from './headerRightArrow.svg';
+export { default as lensIcon } from './lensIcon.svg';
+export { default as heartIcon } from './heartIcon.svg';
+export { default as cartIcon } from './cartIcon.svg';
+export { default as personIcon } from './personIcon.svg';
+export { default as brandIcon } from './brandIcon.svg';

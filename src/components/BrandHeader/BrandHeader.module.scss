@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+    @include dimension(100%, 85px);
+    @include display-flex(row, center, center);
+    .header__body {
+        @include dimension(70%, 100%);
+        @include display-flex(row, space-between, center);
+
+        .header__input {
+            position: relative;
+            @include dimension(25%, 50px);
+            @include display-flex(row, flex-start, center);
+            border: {
+                color: $border-primary-color;
+                width: 2px;
+                style: solid;
+            }
+            padding: {
+                left: 10px;
+            }
+            border-radius: 50px;
+            .header__input__icon {
+                @include dimension(20px, 20px);
+            }
+
+            input {
+                padding-left: 10px;
+                outline: none;
+                border: none;
+                font: {
+                    size: map-get($font-size, "mini");
+                    weight: map-get($font-weights, "bolder");
+                }
+            }
+        }
+
+        .brand__logo__container {
+            @include dimension(30%, 80%);
+            @include display-flex(row, center, center);
+            .brand__logo {
+                @include dimension(85px, 55px);
+            }
+        }
+        .header__info {
+            @include display-flex(row, flex-end, center);
+            width: 25%;
+            ul {
+                @include display-flex(row, space-between, center);
+                width: 100%;
+
+                li {
+                    img {
+                        @include dimension(30px, 25px);
+                    }
+                    width: 100%;
+                    @include display-flex(row, flex-start, center);
+                    .header__infoItem {
+                        font: {
+                            size: map-get($font-size, "mini");
+                            weight: map-get($font-weights, "bold");
+                        }
+                        margin: {
+                            left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

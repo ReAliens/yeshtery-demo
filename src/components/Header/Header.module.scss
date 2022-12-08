@@ -1,49 +1,45 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .header {
-    width: 100%;
-    height: $main-header-height;
+    @include dimension(100%, 50px);
+    @include display-flex(row, center, center);
     background-color: $bg-primary-color;
-    color: $bg-secondary-color;
-    display: flex;
-    justify-content: center;
     .header__body {
-        width: 70%;
-        display: flex;
-        justify-content: space-between;
+        @include dimension(70%, 100%);
+        @include display-flex(row, space-between, center);
         .header__logo {
             width: 12%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include display-flex(row, space-between, center);
             .header__logo__img {
-                width: 50px;
-                height: 50px;
+                @include dimension(50px, 50px);
             }
         }
         .header__announcement {
+            @include display-flex(row, space-between, center);
             width: 30%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
             font: {
                 size: map-get($font-size, "micro");
             }
         }
         .header__info {
+            @include display-flex(row, flex-end, center);
             width: 30%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
             ul {
+                @include display-flex(row, space-between, center);
                 width: 100%;
-                display: flex;
-                justify-content: space-around;
+
                 li {
+                    img {
+                        @include dimension(20px, 20px);
+                    }
                     width: 100%;
-                    display: flex;
-                    align-items: center;
+                    @include display-flex(row, flex-start, center);
                     .header__infoItem {
+                        font: {
+                            size: map-get($font-size, "micro");
+                            weight: map-get($font-weights, "extra-medium");
+                        }
                         margin: {
                             left: 5px;
                         }
