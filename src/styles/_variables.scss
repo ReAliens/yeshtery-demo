@@ -1,0 +1,36 @@
+/*backgrounds Colors*/
+$bg-primary-color: #fff100;
+$bg-secondary-color: #000000;
+$bg-tertiary-color: #3c3c3b;
+
+/* text colors */
+
+$text-primary-color: #ffffff;
+$text-secondary-color: #542e90;
+$text-tertiary-color: #542e90;
+
+
+/* Components heights */
+$main-header-height: 50px;
+
+/* Font size stack */
+$font-size: (
+    "micro": 14px,
+    "mini": 18px,
+    "smallest": 20px,
+    "smaller": 22px,
+    "small": 24px,
+    "medium": 26px,
+    "large": 40px,
+    "larger": 48px,
+    "largest": 56px,
+);
+
+/* Font Weights Stack */
+$font-weights: (
+    "normal": 400,
+    "medium": 500,
+    "extra-medium": 600,
+    "bold": 700,
+    "bolder": 800,
+);
