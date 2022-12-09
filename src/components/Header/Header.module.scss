@@ -18,9 +18,8 @@
         .header__announcement {
             @include display-flex(row, space-between, center);
             width: 30%;
-            font: {
-                size: map-get($font-size, "micro");
-            }
+            @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), 25px);
+
         }
         .header__info {
             @include display-flex(row, flex-end, center);
@@ -34,12 +33,10 @@
                         @include dimension(20px, 20px);
                     }
                     width: 100%;
-                    @include display-flex(row, flex-start, center);
+                    @include display-flex(row, flex-end, center);
                     .header__infoItem {
-                        font: {
-                            size: map-get($font-size, "micro");
-                            weight: map-get($font-weights, "extra-medium");
-                        }
+                        @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "extra-medium"), 20px);
+
                         margin: {
                             left: 5px;
                         }

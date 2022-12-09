@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+    @include dimension(100%, 50px);
+    @include display-flex(row, center, center);
+    background-color: $bg-secondary-color;
+    .header__body {
+        @include dimension(70%, 100%);
+        @include display-flex(row, space-between, center);
+
+        ul {
+            @include display-flex(row, space-between, center);
+            width: 100%;
+            color: $text-primary-color;
+
+            @include font-stack(map-get($font-size, "medium-small"), map-get($font-weights, "extra-medium"), 25px);
+            li:last-of-type {
+                color: $text-quaternary-color;
+            }
+        }
+    }
+}

@@ -29,10 +29,7 @@
                 padding-left: 10px;
                 outline: none;
                 border: none;
-                font: {
-                    size: map-get($font-size, "mini");
-                    weight: map-get($font-weights, "bolder");
-                }
+                @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "bolder"), 25px);
             }
         }
 
@@ -55,12 +52,10 @@
                         @include dimension(30px, 25px);
                     }
                     width: 100%;
-                    @include display-flex(row, flex-start, center);
+                    @include display-flex(row, flex-end, center);
                     .header__infoItem {
-                        font: {
-                            size: map-get($font-size, "mini");
-                            weight: map-get($font-weights, "bold");
-                        }
+                        @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "bold"), 20px);
+
                         margin: {
                             left: 5px;
                         }

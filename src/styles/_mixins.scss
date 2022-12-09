@@ -9,3 +9,9 @@
     width: $width;
     height: $height;
 }
+
+@mixin font-stack($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
