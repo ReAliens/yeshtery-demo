@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+    @include dimension(100%, 60px);
+    @include display-flex(row, center, center);
+    border-bottom: 1px solid black;
+    .header__body {
+        @include dimension(70%, 100%);
+        @include display-flex(row, flex-start, center);
+        @include font-stack(map-get($font-size, "medium-small"), map-get($font-weights, "bolder"), 25px);
+    }
+}
