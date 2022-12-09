@@ -15,3 +15,9 @@
     font-weight: $weight;
     line-height: $height;
 }
+
+@mixin display-grid-column($column, $gap) {
+    display: grid;
+    grid-template-columns: $column;
+    gap: $gap;
+}

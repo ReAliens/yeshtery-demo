@@ -7,7 +7,7 @@ const Breadcrumb = () => {
     <div className={classes.header}>
       <div className={classes.header__body}>
         {breadcrumbItems.map((item, index) => (
-          <nav>
+          <nav key={item.id}>
             {item.name}&nbsp; {index === breadcrumbItems.length - 1 ? '' : '/'}{' '}
             &nbsp;
           </nav>

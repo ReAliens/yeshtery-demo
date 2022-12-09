@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.images__container {
+    @include dimension(100%, 100%);
+    @include display-flex(column, center, center);
+
+    .main__image {
+        @include dimension(100%, 72.5%);
+        @include display-flex(row, center, center);
+        position: relative;
+        .main__image__item {
+            @include dimension(82%, 100%);
+            object-fit: fill;
+            border-radius: 10px;
+        }
+        .main__image__badge {
+            @include dimension(60px, 60px);
+
+            position: absolute;
+            background-color: $text-primary-color;
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+            top: 0.7rem;
+            left: 4.3rem;
+            box-shadow: 0 0px 3px #00000040;
+        }
+    }
+    .images__group {
+        @include dimension(82%, 22.5%);
+        @include display-flex(row, space-between, center);
+        gap: 5px;
+        .images__group__items {
+            @include dimension(110px, 110px);
+        }
+        .arrows {
+            @include dimension(20px, 25px);
+            @include display-flex(row, space-between, center);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.section__container {
+    @include dimension(100%, 100%);
+    @include display-flex(row, center, center);
+    .section__body {
+        @include dimension(70%, 50vh);
+        @include display-grid-column(repeat(2, 1fr), 20px);
+    }
+}

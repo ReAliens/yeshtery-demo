@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrandHeader, Breadcrumb, Header, NavHeader } from '../../components';
+import {
+  BrandHeader,
+  Breadcrumb,
+  Header,
+  NavHeader,
+  ProductSection,
+} from '../../components';
 
 const Home = () => {
   return (
@@ -8,7 +14,7 @@ const Home = () => {
       <BrandHeader />
       <NavHeader />
       <Breadcrumb />
-      <h1>This is a Home page</h1>
+      <ProductSection />
     </div>
   );
 };
