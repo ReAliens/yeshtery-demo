@@ -1,5 +1,5 @@
 import React from 'react';
-import { productImages } from '../../constants/productImages';
+import { product } from '../../services/productApi';
 import { leftArrowIcon, rightArrowIcon, view360Icon } from '../../images';
 import classes from './ProductImageContainer.module.scss';
 
@@ -8,7 +8,7 @@ const ProductImagesContainer = () => {
     <div className={classes.images__container}>
       <div className={classes.main__image} style={{ width: '100%' }}>
         <img
-          src={productImages.find((item) => item.main === true).src}
+          src={product.images.find((item) => item.main === true).src}
           alt="main_image"
           className={classes.main__image__item}
         />
@@ -18,7 +18,7 @@ const ProductImagesContainer = () => {
       </div>
       <div className={classes.images__group}>
         <img src={leftArrowIcon} alt="left-arrow" className={classes.arrows} />
-        {productImages
+        {product.images
           .filter((item) => item.main === false)
           .map((item) => (
             <img

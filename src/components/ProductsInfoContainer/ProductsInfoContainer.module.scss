@@ -1,0 +1,218 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.info__container {
+    @include dimension(100%, 100%);
+    @include display-flex(column, flex-start, flex-start);
+    padding: {
+        top: 25px;
+    }
+    .main__info {
+        @include dimension(80%, auto);
+        border-bottom: 1px solid $divider-color;
+        padding: {
+            bottom: 25px;
+        }
+        .description {
+            max-width: 400px;
+            word-wrap: break-word;
+            margin-top: 15px;
+            @include font-stack(
+                map-get($font-size, "medium-small"),
+                map-get($font-weights, "extra-medium"),
+                $height: 22px
+            );
+        }
+        .gender {
+            width: 100%;
+            display: block;
+            @include font-stack(
+                map-get($font-size, "medium-small"),
+                map-get($font-weights, "extra-medium"),
+                $height: 22px
+            );
+            margin: {
+                top: 15px;
+                bottom: 15px;
+            }
+            opacity: 0.6;
+        }
+        .product__rates__info {
+            @include display-flex(row, space-between, flex-end);
+            max-width: 320px;
+            margin: {
+                top: 15px;
+                bottom: 15px;
+            }
+
+            .stars {
+                width: 40%;
+                @include display-flex(row, space-between, center);
+            }
+
+            span:nth-child(2) {
+                @include font-stack(map-get($font-size, "smallest"), map-get($font-weights, "bolder"), $height: 20px);
+            }
+
+            .rateVotes {
+                @include font-stack(
+                    map-get($font-size, "medium-small"),
+                    map-get($font-weights, "normal"),
+                    $height: 18px
+                );
+                opacity: 0.6;
+            }
+        }
+        .product__prices_info {
+            @include display-flex(row, space-between, flex-end);
+            max-width: 350px;
+            margin: {
+                top: 15px;
+                bottom: 15px;
+            }
+
+            span:nth-child(1) {
+                @include font-stack(map-get($font-size, "large"), map-get($font-weights, "bolder"), $height: 40px);
+                color: $text-tertiary-color;
+            }
+            .currency {
+                color: $text-tertiary-color;
+            }
+
+            .list__price {
+                @include font-stack(
+                    map-get($font-size, "medium-small"),
+                    map-get($font-weights, "bolder"),
+                    $height: 40px
+                );
+                opacity: 0.6;
+                text-decoration: line-through;
+            }
+
+            span:nth-child(3) {
+                @include font-stack(
+                    map-get($font-size, "medium-small"),
+                    map-get($font-weights, "bolder"),
+                    $height: 40px
+                );
+                background-color: $bg-primary-color;
+                padding: {
+                    left: 10px;
+                    right: 10px;
+                }
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .size__container {
+        @include display-flex(column, flex-start, flex-start);
+        border-bottom: 1px solid $divider-color;
+        @include dimension(80%, auto);
+        h1 {
+            @include font-stack(map-get($font-size, "smallest"), map-get($font-weights, "bolder"), $height: 22px);
+            margin: {
+                bottom: 20px;
+            }
+        }
+        padding: {
+            top: 25px;
+            bottom: 25px;
+        }
+        .sizes__container {
+            width: 100%;
+            @include display-flex(row, space-around, center);
+            .size__item {
+                @include dimension(75px, 75px);
+                @include display-flex(row, center, center);
+                border-radius: 50%;
+                border: 1px solid $divider-color;
+                color: $text-tertiary-color;
+                @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), $height: 22px);
+            }
+        }
+    }
+
+    .colors__container {
+        @include display-flex(column, flex-start, flex-start);
+        border-bottom: 1px solid $divider-color;
+        @include dimension(80%, auto);
+        h1 {
+            @include font-stack(map-get($font-size, "smallest"), map-get($font-weights, "bolder"), $height: 22px);
+            margin: {
+                bottom: 20px;
+            }
+        }
+        padding: {
+            top: 25px;
+            bottom: 25px;
+        }
+
+        .color__container {
+            img {
+                margin: {
+                    right: 10px;
+                }
+            }
+            @include display-flex(row, space-around, center);
+        }
+    }
+    .quantity__container {
+        @include display-flex(column, flex-start, flex-start);
+        @include dimension(80%, auto);
+        h1 {
+            @include font-stack(map-get($font-size, "smallest"), map-get($font-weights, "bolder"), $height: 22px);
+            margin: {
+                bottom: 20px;
+            }
+        }
+        padding: {
+            top: 25px;
+            bottom: 25px;
+        }
+        .quantity__function__bar {
+            @include dimension(40%, auto);
+            @include display-flex(row, space-between, center);
+            background-color: $text-secondary-color;
+            padding: {
+                left: 5px;
+                right: 5px;
+                top: 5px;
+                bottom: 5px;
+            }
+            border-radius: 25px;
+            button {
+                @include dimension(30px, 30px);
+                @include display-flex(row, center, center);
+                border-radius: 50%;
+                border: none;
+                background-color: $bg-primary-color;
+                cursor: pointer;
+                color: $text-tertiary-color;
+                @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), $height: 22px);
+            }
+        }
+    }
+    .buttons__container {
+        @include display-flex(row, space-between, center);
+        @include dimension(100%, auto);
+        padding: {
+            top: 25px;
+            bottom: 25px;
+        }
+        button {
+            @include dimension(250px, 50px);
+            @include display-flex(row, center, center);
+            border-radius: 25px;
+            border: none;
+            background-color: $bg-primary-color;
+            cursor: pointer;
+            @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "bold"), $height: 22px);
+        }
+
+        button:nth-child(1) {
+            background-color: $text-tertiary-color;
+            color: $text-primary-color;
+        }
+    }
+}
