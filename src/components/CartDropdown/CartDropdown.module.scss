@@ -1,0 +1,68 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    .cart__body {
+        position: absolute;
+        @include display-flex(column, flex-start, center);
+        @include dimension(500px, 100%);
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4.5px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+
+        h1 {
+            color: $text-tertiary-color;
+            @include font-stack(map-get($font-size, "medium"), map-get($font-weights, "bold"), 35px);
+            margin: {
+                top: 20px;
+                bottom: 20px;
+            }
+        }
+        h2 {
+            text-align: left;
+            width: 100%;
+            @include font-stack(map-get($font-size, "medium-small"), map-get($font-weights, "extra-medium"), 22px);
+            margin: {
+                top: 20px;
+                bottom: 20px;
+            }
+        }
+
+        p {
+            @include font-stack(map-get($font-size, "smaller"), map-get($font-weights, "bold"), 28px);
+        }
+        .buttons__container {
+            @include display-flex(row, space-around, center);
+            width: 100%;
+            margin-top: 30px;
+
+            button {
+                @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "bold"), 22px);
+                @include dimension(220px, 50px);
+                border-radius: 25px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .review__button {
+                background-color: $bg-primary-color;
+            }
+            .checkout__button {
+                background-color: $text-tertiary-color;
+                color: $text-primary-color;
+            }
+        }
+    }
+}

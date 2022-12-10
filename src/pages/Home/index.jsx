@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrandHeader,
   Breadcrumb,
+  CartDropdown,
   Footer,
   Header,
   NavHeader,
@@ -14,8 +15,9 @@ const SimilarProducts = React.lazy(() =>
 );
 
 const Home = () => {
+  const cartItems = [];
   return (
-    <div>
+    <>
       <Header />
       <BrandHeader />
       <NavHeader />
@@ -23,7 +25,8 @@ const Home = () => {
       <ProductSection product={product} />
       <SimilarProducts similarProducts={similarProducts} />
       <Footer />
-    </div>
+      <CartDropdown items={cartItems} />
+    </>
   );
 };
 

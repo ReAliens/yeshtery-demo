@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.card {
+    @include dimension(100%, 120px);
+    @include display-grid-column("0.5fr 1fr", 20px);
+    border: 1px solid $border-primary-color;
+
+    .item__info {
+        @include display-flex(column, flex-start, center);
+        width: 100%;
+        .price__container {
+            @include display-flex(row, space-between, center);
+            width: 100%;
+            .item__price {
+                @include font-stack(map-get($font-size, "smaller"), map-get($font-weights, "bold"), 22px);
+                color: $text-quaternary-color;
+            }
+            button {
+                @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), 22px);
+                width: 100px;
+                background-color: $bg-primary-color;
+            }
+        }
+    }
+}

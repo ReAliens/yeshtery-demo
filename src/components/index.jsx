@@ -7,3 +7,5 @@ export { default as ProductImagesContainer } from './ProductImagesContainer/Prod
 export { default as SimilarProducts } from './SimilarProducts/SimilarProducts';
 export { default as SimilarProductsCard } from './SimilarProductsCard/SimilarProductsCard';
 export { default as Footer } from './Footer/Footer';
+export { default as CartDropdown } from './CartDropdown/CartDropdown';
+export { default as CartItem } from './CartItem/CartItem';
