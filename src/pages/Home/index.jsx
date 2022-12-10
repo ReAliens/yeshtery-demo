@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrandHeader,
   Breadcrumb,
+  Footer,
   Header,
   NavHeader,
   ProductSection,
@@ -17,6 +18,7 @@ const Home = () => {
       <Breadcrumb />
       <ProductSection />
       <SimilarProducts />
+      <Footer />
     </div>
   );
 };

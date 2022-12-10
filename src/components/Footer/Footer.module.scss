@@ -1,0 +1,133 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.footer__container {
+    @include dimension(100%, 650px);
+    @include display-flex(column, center, center);
+    background-color: $bg-tertiary-color;
+    .footer__body {
+        @include dimension(70%, 80%);
+        @include display-grid-column(repeat(2, 1fr), 5px);
+        border-bottom: 1px solid $divider-color-2;
+        align-items: center;
+        .footer__column__1 {
+            @include dimension(100%, 75%);
+            @include display-flex(column, space-around, flex-start);
+            border-right: 1px solid $divider-color-2;
+            p {
+                width: 80%;
+                @include font-stack(
+                    map-get($font-size, "medium-small"),
+                    map-get($font-weights, "regular"),
+                    $height: 22px
+                );
+                color: $text-primary-color;
+            }
+        }
+        .footer__column__2 {
+            @include dimension(80%, 80%);
+            @include display-flex(column, space-around, flex-start);
+            padding: {
+                top: 30px;
+                bottom: 30px;
+                left: 40px;
+            }
+            p {
+                @include font-stack(map-get($font-size, "smallest"), map-get($font-weights, "regular"), $height: 22px);
+                color: $text-primary-color;
+                margin-bottom: 10px;
+            }
+            .email__input {
+                position: relative;
+                @include dimension(100%, 50px);
+                @include display-flex(row, flex-start, center);
+                background-color: $text-primary-color;
+                border: {
+                    color: $border-primary-color;
+                    width: 2px;
+                    style: solid;
+                }
+
+                border-radius: 50px;
+
+                input {
+                    padding-left: 10px;
+                    outline: none;
+                    border: none;
+                    @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "bolder"), 25px);
+                }
+
+                button {
+                    @include dimension(150px, 40px);
+                    @include display-flex(row, space-around, center);
+                    @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), 15px);
+                    background-color: $bg-primary-color;
+                    border-radius: 50px;
+                    border: none;
+                    margin-right: 5px;
+                    padding: {
+                        left: 5px;
+                        right: 5px;
+                    }
+                    cursor: pointer;
+                }
+            }
+            .useful__links {
+                @include dimension(100%, 100%);
+                @include display-grid-column(repeat(2, 1fr), 5px);
+                gap: 20px;
+                margin-top: 20px;
+                a {
+                    @include font-stack(map-get($font-size, "mini"), map-get($font-weights, "extra-medium"), 25px);
+                    color: $text-primary-color;
+                    text-decoration: none;
+                }
+                .internal__links {
+                    @include dimension(100%, 100%);
+                    @include display-flex(column, space-around, flex-start);
+                }
+                .social__links {
+                    @include dimension(100%, 100%);
+                    @include display-flex(column, space-around, center);
+                    border-left: 1px solid $divider-color-2;
+                    a {
+                        @include dimension(30px, 30px);
+                        @include display-flex(row, center, center);
+                        border-radius: 50%;
+                        color: $text-primary-color;
+                        text-decoration: none;
+                        svg {
+                            font-size: 20px;
+                        }
+                        span {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom {
+        @include dimension(70%, auto);
+        @include display-flex(row, space-between, center);
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        }
+        span {
+            @include font-stack(map-get($font-size, "medium-small"), map-get($font-weights, "regular"), 20px);
+            color: $text-primary-color;
+        }
+        .payment {
+            @include dimension(20%, 100%);
+            @include display-flex(row, space-around, center);
+        }
+        .company__logo {
+            @include dimension(auto, 100%);
+            @include display-flex(row, center, center);
+            span{
+                margin-right: 10px;
+            }
+        }
+    }
+}

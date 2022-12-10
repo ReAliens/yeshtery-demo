@@ -11,7 +11,7 @@ const SimilarProducts = () => {
         <h3>You may like these products also</h3>
         <div className={classes.cards__container}>
           {similarProducts.map((item) => (
-            <SimilarProductsCard item={item} />
+            <SimilarProductsCard key={item.id} item={item} />
           ))}
         </div>
       </div>

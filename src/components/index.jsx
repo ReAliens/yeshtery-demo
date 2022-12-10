@@ -6,3 +6,4 @@ export { default as ProductSection } from './ProductSection/ProductSection';
 export { default as ProductImagesContainer } from './ProductImagesContainer/ProductImageContainer';
 export { default as SimilarProducts } from './SimilarProducts/SimilarProducts';
 export { default as SimilarProductsCard } from './SimilarProductsCard/SimilarProductsCard';
+export { default as Footer } from './Footer/Footer';
