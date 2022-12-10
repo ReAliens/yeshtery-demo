@@ -6,8 +6,12 @@ import {
   Header,
   NavHeader,
   ProductSection,
-  SimilarProducts,
 } from '../../components';
+import { product } from '../../services/productApi';
+import { similarProducts } from '../../services/similarProductsApi';
+const SimilarProducts = React.lazy(() =>
+  import('../../components/SimilarProducts/SimilarProducts'),
+);
 
 const Home = () => {
   return (
@@ -16,8 +20,8 @@ const Home = () => {
       <BrandHeader />
       <NavHeader />
       <Breadcrumb />
-      <ProductSection />
-      <SimilarProducts />
+      <ProductSection product={product} />
+      <SimilarProducts similarProducts={similarProducts} />
       <Footer />
     </div>
   );

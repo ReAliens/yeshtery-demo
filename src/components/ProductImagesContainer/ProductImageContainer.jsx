@@ -1,9 +1,8 @@
 import React from 'react';
-import { product } from '../../services/productApi';
 import { leftArrowIcon, rightArrowIcon, view360Icon } from '../../images';
 import classes from './ProductImageContainer.module.scss';
 
-const ProductImagesContainer = () => {
+const ProductImagesContainer = ({ product }) => {
   return (
     <div className={classes.images__container}>
       <div className={classes.main__image} style={{ width: '100%' }}>
