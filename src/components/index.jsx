@@ -4,3 +4,5 @@ export { default as NavHeader } from './NavHeader/NavHeader';
 export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
 export { default as ProductSection } from './ProductSection/ProductSection';
 export { default as ProductImagesContainer } from './ProductImagesContainer/ProductImageContainer';
+export { default as SimilarProducts } from './SimilarProducts/SimilarProducts';
+export { default as SimilarProductsCard } from './SimilarProductsCard/SimilarProductsCard';

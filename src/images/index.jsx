@@ -22,3 +22,8 @@ export { default as productImage4 } from './product-image-4.png';
 export { default as productImage5 } from './product-image-5.png';
 export { default as productImageColor1 } from './product-image-color-1.png';
 export { default as productImageColor2 } from './product-image-color-2.png';
+export { default as cardImage1 } from './card-1.png';
+export { default as cardImage2 } from './card-2.png';
+export { default as cardImage3 } from './card-3.png';
+export { default as cardImage4 } from './card-4.png';
+export { default as small360ViewIcon } from './small360view.png';

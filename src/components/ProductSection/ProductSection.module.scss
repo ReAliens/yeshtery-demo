@@ -5,7 +5,7 @@
     @include dimension(100%, 100%);
     @include display-flex(row, center, center);
     .section__body {
-        @include dimension(70%, 800px);
+        @include dimension(70%, 900px);
         @include display-grid-column(repeat(2, 1fr), 20px);
         padding: {
             top: 20px;

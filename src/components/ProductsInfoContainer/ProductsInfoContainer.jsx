@@ -65,7 +65,7 @@ const ProductsInfoContainer = () => {
       <div className={classes.colors__container}>
         <h1>Color</h1>
         <div className={classes.color__container}>
-          {product.colors.map((color, index) => (
+          {product.colors.map((color) => (
             <div key={color.id}>
               <img
                 src={color.image}

@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.section__container {
+    @include dimension(100%, 100%);
+    @include display-flex(row, center, center);
+    margin: {
+        top: 50px;
+    }
+    .section__body {
+        @include dimension(65%, 800px);
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        }
+        h1 {
+            width: 100%;
+            display: block;
+            color: $text-tertiary-color;
+            @include font-stack(map-get($font-size, "medium"), map-get($font-weights, "bold"), $height: 33px);
+        }
+        h3 {
+            @include font-stack(map-get($font-size, "smaller"), map-get($font-weights, "extra-medium"), $height: 26px);
+        }
+
+        .cards__container {
+            @include display-flex(row, flex-start, center);
+            gap: 20px;
+            @include dimension(87%, 600px);
+            overflow-x: auto;
+        }
+    }
+}

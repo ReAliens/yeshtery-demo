@@ -5,6 +5,7 @@ import {
   Header,
   NavHeader,
   ProductSection,
+  SimilarProducts,
 } from '../../components';
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <NavHeader />
       <Breadcrumb />
       <ProductSection />
+      <SimilarProducts />
     </div>
   );
 };
