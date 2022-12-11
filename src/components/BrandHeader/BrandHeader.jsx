@@ -3,7 +3,7 @@ import { brandHeaderItems } from '../../constants/brandHeaderItems';
 import { brandIcon, lensIcon } from '../../images';
 import classes from './BrandHeader.module.scss';
 
-const BrandHeader = () => {
+const BrandHeader = ({ items, handleShowCart }) => {
   return (
     <div className={classes.header}>
       <div className={classes.header__body}>
@@ -24,12 +24,24 @@ const BrandHeader = () => {
         </div>
         <div className={classes.header__info}>
           <ul>
-            {brandHeaderItems.map((item) => (
-              <li key={item.id} className={classes.brandHeader__item}>
-                <img src={item.icon} alt="brand-header-links" />
-                <span className={classes.header__infoItem}>{item.name}</span>
-              </li>
-            ))}
+            {brandHeaderItems.map((item) =>
+              item.name === 'Cart' ? (
+                <li
+                  key={item.id}
+                  className={classes.brandHeader__cart}
+                  onClick={() => handleShowCart((prev) => !prev)}
+                >
+                  <img src={item.icon} alt="brand-header-links" />
+                  <span className={classes.cart__badge}>{items.length}</span>
+                  <span className={classes.header__infoItem}>{item.name}</span>
+                </li>
+              ) : (
+                <li key={item.id} className={classes.brandHeader__item}>
+                  <img src={item.icon} alt="brand-header-links" style={{}} />
+                  <span className={classes.header__infoItem}>{item.name}</span>
+                </li>
+              ),
+            )}
           </ul>
         </div>
       </div>

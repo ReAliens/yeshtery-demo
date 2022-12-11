@@ -47,6 +47,23 @@
                 @include display-flex(row, space-between, center);
                 width: 100%;
 
+                .brandHeader__cart {
+                    @include dimension(fit-content, auto);
+                    position: relative;
+                    cursor: pointer;
+
+                    .cart__badge {
+                        @include dimension(15px, 15px);
+                        @include display-flex(row, center, center);
+                        position: absolute;
+                        top: 0px;
+                        left: 15px;
+                        border-radius: 50%;
+                        text-align: center;
+                        background-color: $bg-primary-color;
+                    }
+                }
+
                 li {
                     img {
                         @include dimension(30px, 25px);

@@ -2,24 +2,43 @@
 @import "../../styles/mixins.scss";
 
 .card {
-    @include dimension(100%, 120px);
-    @include display-grid-column("0.5fr 1fr", 20px);
+    @include dimension(100%, 160px);
+    @include display-grid-column(0.4fr 1fr, 20px);
     border: 1px solid $border-primary-color;
+    padding: 5px;
+    img {
+        @include dimension(100%, 95%);
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    margin: {
+        top: 20px;
+        bottom: 20px;
+    }
 
     .item__info {
-        @include display-flex(column, flex-start, center);
-        width: 100%;
+        @include display-flex(column, space-around, space-around);
+        .item__desc {
+            @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "bold"), 22px);
+        }
         .price__container {
             @include display-flex(row, space-between, center);
             width: 100%;
             .item__price {
                 @include font-stack(map-get($font-size, "smaller"), map-get($font-weights, "bold"), 22px);
-                color: $text-quaternary-color;
+                color: $text-tertiary-color;
+
+                .currency__symbol {
+                    @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "bold"), 22px);
+                }
             }
             button {
                 @include font-stack(map-get($font-size, "micro"), map-get($font-weights, "normal"), 22px);
                 width: 100px;
                 background-color: $bg-primary-color;
+                border-radius: 25px;
+                border: none;
             }
         }
     }

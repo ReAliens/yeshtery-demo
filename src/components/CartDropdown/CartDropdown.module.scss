@@ -22,6 +22,13 @@
         box-shadow: 2px 2px 4.5px rgba(0, 0, 0, 0.5);
         z-index: 10;
 
+        .close__button{
+            @include dimension(100%,auto);
+            text-align:end;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
         h1 {
             color: $text-tertiary-color;
             @include font-stack(map-get($font-size, "medium"), map-get($font-weights, "bold"), 35px);

@@ -14,20 +14,61 @@ const SimilarProducts = React.lazy(() =>
   import('../../components/SimilarProducts/SimilarProducts'),
 );
 
-const Home = () => {
-  const cartItems = [];
-  return (
-    <>
-      <Header />
-      <BrandHeader />
-      <NavHeader />
-      <Breadcrumb />
-      <ProductSection product={product} />
-      <SimilarProducts similarProducts={similarProducts} />
-      <Footer />
-      <CartDropdown items={cartItems} />
-    </>
-  );
-};
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cartItems: [],
+      showCart: false,
+    };
+  }
+
+  handleShowCart = () => {
+    this.setState({ showCart: !this.state.showCart });
+  };
+
+  handleAddToCart = (item) => {
+    if (this.state.cartItems.length > 0) {
+      const itemExists = this.state.cartItems.find(
+        (cartItem) => cartItem.id === item.id,
+      );
+      if (itemExists) {
+        const updatedCartItems = this.state.cartItems.map((cartItem) => {
+          if (cartItem.id === item.id) {
+            return { ...cartItem, quantity: cartItem.quantity + 1 };
+          }
+          return cartItem;
+        });
+        return this.setState({ cartItems: updatedCartItems });
+      }
+    }
+    this.setState({
+      cartItems: [...this.state.cartItems, { ...item, quantity: 1 }],
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <Header />
+        <BrandHeader
+          items={this.state.cartItems}
+          handleShowCart={this.handleShowCart}
+        />
+        <NavHeader />
+        <Breadcrumb />
+        <ProductSection product={product} addItem={this.handleAddToCart} />
+        <SimilarProducts similarProducts={similarProducts} />
+        <Footer />
+        {this.state.showCart && (
+          <CartDropdown
+            items={this.state.cartItems}
+            handleShowCart={this.handleShowCart}
+          />
+        )}
+      </>
+    );
+  }
+}
 
 export default Home;

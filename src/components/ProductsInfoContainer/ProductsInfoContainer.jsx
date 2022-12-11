@@ -8,10 +8,9 @@ import {
   plusSignIcon,
   whiteStarICon,
 } from '../../images';
-import { product } from '../../services/productApi';
 import classes from './ProductsInfoContainer.module.scss';
 
-const ProductsInfoContainer = () => {
+const ProductsInfoContainer = ({ product, addToCart }) => {
   const listPrice = lastPrice(product.price, product.discount);
   const price = addCommaToNumber(product.price);
   const modListPrice = addCommaToNumber(listPrice);
@@ -92,7 +91,7 @@ const ProductsInfoContainer = () => {
         </div>
       </div>
       <div className={classes.buttons__container}>
-        <button>Add to Cart</button>
+        <button onClick={() => addToCart(product)}>Add to Cart</button>
         <button>Pickup From Store</button>
       </div>
     </div>
