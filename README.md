@@ -6,7 +6,7 @@
 
 # Live Demo
 
-[Live Link](https://realiens.github.io/yeshtery-demo/)
+[Live Link](https://realiens.github.io/yeshtery-demo)
 
 <br/>
 
