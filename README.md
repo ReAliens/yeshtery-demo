@@ -6,7 +6,7 @@
 
 # Live Demo
 
-[Live Link](https://librarywizard.netlify.app/)
+[Live Link](https://realiens.github.io/yeshtery-demo/)
 
 <br/>
 
